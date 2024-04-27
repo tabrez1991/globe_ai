@@ -1,12 +1,19 @@
+"use client"
+
 import { Box } from '@mui/material'
 import styles from './page.module.css'
 import Header from '../../components/Header'
+import React from 'react';
+import SideNav from '../../components/SideNav';
 
 export default function Home() {
+  const [openNav, setOpenNav] = React.useState(false);
+
   return (
-    <Box>
+    <Box className={styles.main} id='background-element'>
       {/* Header */}
-      <Header />
+      <Header handleNav={() => setOpenNav(!openNav)} />
+      {openNav && <SideNav open={openNav} handleNav={() => setOpenNav(!openNav)} />}
 
 
       {/* <div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex={-1} id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
@@ -65,54 +72,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
 
 
-      <section className="hero-section d-flex justify-content-center align-items-center" id="section_1">
-        <div className="container">
-          <div className="row">
+      <section className={styles["hero-section"]} style={{ display: "flex", justifyContent: "center", alignItems: "center" }} id="section_1">
 
-            <div className="col-lg-6 col-12 mx-auto">
-              <small>our website is under construction.
-                <a rel="nofollow" target="_blank" href="https://www.pexels.com/video/digital-projection-of-the-earth-mass-in-blue-lights-3129957/">Earth video by Pexels</a></small>
-
-              <h1 className="text-white mt-2 mb-4 pb-2">
-                Stay tuned!
-              </h1>
-
-              <ul className="countdown d-flex flex-wrap align-items-center">
-                <li className="countdown-item d-flex flex-column justify-content-center align-items-center">
-                  <h2 className="countdown-title days">14</h2>
-                  <span className="countdown-text">Days</span>
-                </li>
-
-                <li className="countdown-item d-flex flex-column justify-content-center align-items-center">
-                  <h2 className="countdown-title hours">10</h2>
-                  <span className="countdown-text">Hours</span>
-                </li>
-
-                <li className="countdown-item d-flex flex-column justify-content-center align-items-center">
-                  <h2 className="countdown-title minutes">15</h2>
-                  <span className="countdown-text">Minutes</span>
-                </li>
-
-                <li className="countdown-item d-flex flex-column justify-content-center align-items-center">
-                  <h2 className="countdown-title seconds">34</h2>
-                  <span className="countdown-text">Seconds</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="video-wrap">
-          <video autoPlay loop muted className="custom-video" poster="">
-            <source src="videos/video.mp4" type="video/mp4" />
+        <div className={styles["video-wrap"]}>
+          <video autoPlay loop muted className={styles["custom-video"]} poster="">
+            <source src="./videos/video.mp4" type="video/mp4" />
 
             Your browser does not support the video tag.
           </video>
         </div>
-      </section> */}
+      </section>
     </Box>
   )
 }

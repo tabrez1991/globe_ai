@@ -1,0 +1,82 @@
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+.social-icon-link:hover {
+  background: #E07A5F;
+  color: #ffffff
+}
+
+.social-icon-link {
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  display: block;
+  margin-right: 5px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+}
+
+.custom-btn {
+  background: #E07A5F;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 6px 18px;
+}
+
+.custom-border-btn {
+  background: transparent;
+  border: 2px solid #F2CC8F;
+  color: #F2CC8F;
+}
+
+.custom-border-btn:hover {
+  background: #F2CC8F;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.offcanvas-icon {
+  font-size: 28px;
+  color: #ffffff;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  /* Adjust styles for mobile view here */
+  .container {
+    padding: 10px; /* Example: reduce padding for smaller screens */
+  }
+
+  /* Hide "Stay connected" text on mobile */
+  .stay-connected {
+    display: none !important;
+  }
+
+  /* Adjust spacing for social icons on mobile */
+  .social-icon-link {
+    margin-right: 5px;
+  }
+
+  /* Move "Notify Me" button to the right on mobile */
+  .custom-btn {
+    margin-left: auto;
+  }
+}
