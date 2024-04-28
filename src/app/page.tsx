@@ -6,6 +6,7 @@ import Header from '../../components/Header'
 import React from 'react';
 import SideNav from '../../components/SideNav';
 import WeatherWidget from '../../components/WeatherWidget';
+import BarGraph from '../../components/BarGraph';
 
 export default function Home() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -21,6 +22,8 @@ export default function Home() {
       {/* Weather Widget */}
       <WeatherWidget />
 
+      {/* Bar Graph */}
+      <BarGraph />
 
       <section className={styles["hero-section"]} style={{ display: "flex", justifyContent: "center", alignItems: "center" }} id="section_1">
         <div className={styles["video-wrap"]}>
