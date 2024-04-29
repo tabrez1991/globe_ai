@@ -12,7 +12,10 @@ const customColors = ['#18c1be', '#3ba2cc']; // Define custom colors for series 
 
 const PieChart = () => (
   <Container sx={{ position: "relative" }}>
-    <Box sx={{ width: "350px", height: "200px", border: "2px solid rgb(0 0 0 / 42%)", background: "rgb(0 0 0 / 42%)", p: 2, borderRadius: "4px", position: "absolute", top: "330px", left: "2%" }}>
+    <Box sx={{
+      width: "350px", height: "200px", border: "2px solid rgb(75 70 70 / 42%)", background: "rgb(75 70 70 / 42%)", p: 2, borderRadius: "4px",
+      // position: "absolute", top: "330px", left: "2%"
+    }}>
       <Typography sx={{ color: "#fff" }}> Title </Typography>
       <ResponsivePie
         data={pieChart}
@@ -37,7 +40,7 @@ const PieChart = () => (
         arcLinkLabelsTextColor="#333333"
         arcLinkLabelsThickness={0}
         arcLinkLabelsColor={{ from: 'color' }}
-        arcLabelsSkipAngle={1} 
+        arcLabelsSkipAngle={1}
         arcLabelsTextColor={{
           from: 'color',
           modifiers: [

@@ -31,7 +31,7 @@ export const barGraph = [
   }
 ];
 
-export const pieChart= [
+export const pieChart = [
   {
     "id": "series 1",
     "label": "series 1",
@@ -64,7 +64,7 @@ export const pieChart= [
   }
 ]
 
-export const lineGraph =[
+export const lineGraph = [
   {
     "id": "series 1",
     "color": "hsl(157, 70%, 50%)",
@@ -125,4 +125,42 @@ export const lineGraph =[
       },
     ]
   },
+]
+
+export const circleGraph = [
+  {
+    "id": "series 2",
+    "label": "series 2",
+    "value": 25,
+    "color": "#3ba2cc"
+  },
+  {
+    "id": "series 1",
+    "label": "series 1",
+    "value": 75,
+    "color": "#18c1be"
+  }
+]
+
+export const horizontalGraph = [
+  {
+    "country": "1.1",
+    "series 1": 79,
+    "series 2": 67,
+  },
+  {
+    "country": "2.1",
+    "series 1": 2,
+    "series 2": 24,
+  },
+  {
+    "country": "3.1",
+    "series 1": 80,
+    "series 2": 134,
+  },
+  {
+    "country": "4.1",
+    "series 1": 20,
+    "series 2": 141,
+  }
 ]

@@ -3,16 +3,19 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
 }
 
 .hero-section {
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   min-height: 675px;
   padding-top: 100px;
   padding-bottom: 100px;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .video-wrap {

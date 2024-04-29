@@ -35,7 +35,10 @@ const WeatherWidget = () => {
 
   return (
     <Container sx={{ position: "relative" }}>
-      <Box sx={{ width: "250px", border: "2px solid #000", background: "#000000b3", p: 2, borderRadius: "4px", position: "absolute", top: "150px", right: "2%" }}>
+      <Box sx={{
+        width: "250px", border: "2px solid #000", background: "#000000b3", p: 2, borderRadius: "4px",
+        // position: "absolute", top: "150px", right: "2%"
+      }}>
         <Box sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
           <Typography sx={{ color: "#ffa40e", mr: 2, fontSize: "1.5rem" }}><i className="ri-map-pin-fill"></i></Typography>
           <Typography sx={{ fontSize: "1.5rem" }}>{locationInfo?.city}</Typography>

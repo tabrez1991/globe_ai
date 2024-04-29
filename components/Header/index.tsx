@@ -7,7 +7,7 @@ const Header = (props: any) => {
   const {handleNav} = props;
   return (
     <Box sx={{ position: "absolute", zIndex: 22, top: 0, right: 0, left: 0, paddingTop: "30px", paddingBottom: "30px" }}>
-      <Container sx={{ backgroundColor: "rgb(0 0 0 / 42%)", borderRadius: "100px", padding: "15px 25px", maxHeight: "70px" }}>
+      <Container sx={{ backgroundColor: "rgb(75 70 70 / 42%)", borderRadius: "100px", padding: "15px 25px", maxHeight: "70px" }}>
         <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
 
           {/* Logo and Brand Name */}
