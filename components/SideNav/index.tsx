@@ -6,27 +6,31 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import { useRouter } from 'next/navigation';
 
 export default function SideNav(props: any) {
   const { open, handleNav } = props;
 
+  const router = useRouter();
+
+  const menu = [
+    {
+      id: 0,
+      name: 'Home',
+      link: "/"
+    }, {
+      id: 1,
+      name: 'Health',
+      link: "/health"
+    }]
+
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={handleNav}>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={text} />
+        {menu.map((text, index) => (
+          <ListItem key={text.id} disablePadding>
+            <ListItemButton onClick={() => router.push(text.link)}>
+              <ListItemText primary={text.name} />
             </ListItemButton>
           </ListItem>
         ))}
