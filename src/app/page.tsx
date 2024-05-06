@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Container, Grid } from '@mui/material'
+import { Box, Container, Grid, TextareaAutosize } from '@mui/material'
 import styles from './page.module.css'
 import Header from '../../components/Header'
 import React from 'react';
@@ -41,6 +41,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={3} xl={3}></Grid>
           <Grid item xs={12} sm={12} md={12} lg={3} xl={3} sx={{ textAlign: "-webkit-right", alignSelf: "end" }}>
+            <TextareaAutosize name="Outlined" placeholder="Type in here…" autoFocus style={{ background: "rgb(75 70 70 / 42%)", width: "100%", padding: "8px" }} maxRows={3} minRows={3} />
             {/* Statistics */}
             <Statistics />
           </Grid>
